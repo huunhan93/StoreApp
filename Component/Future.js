@@ -7,7 +7,10 @@ export default class Future extends Component {
         //const img = require( + "");
         return (
             <TouchableOpacity activeOpacity={0.5} onPress={() =>
-                this.props.navigation.navigate(Future.screen)
+                this.props.navigation.navigate(Future.screen, {
+                    categoryName : Future.title
+                })
+
             }>
                 <View style={styles.container}>
                     <Text style={styles.title}>{Future.title}</Text>
@@ -31,7 +34,7 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.3,
         shadowRadius: 10,
         shadowOffset: { width: 0, height: 0 },
-        marginBottom: 16
+        marginBottom: 8
     },
     title: {
         //textTransform: 'uppercase',
